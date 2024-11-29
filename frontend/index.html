@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="app.js"></script>
+        <link rel="stylesheet" href="estilos.css">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous">
+        ,<script
+            src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+        <link href rel integrity>
+        <link rel href>
+        <script src></script>
+        <script src></script>
+        <title>Gestor de contraseñas</title>
+
+    </head>
+    <body style="background-color: rgb(172, 197, 230)">
+        <div id="main" class="container">
+            <div id="marco" class="container my-5 text-center">
+                <h1>Gestor de contraseñas</h1>
+                <table class="table table-stripped table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Plataforma</th>
+                            <th scope="col">Usuario</th>
+                            <th scope="col">Contraseña</th>
+                            <th scope="col">Acciones</th>
+
+                        </tr>
+                    </thead>
+                    <tbody id="data">
+                    </tbody>
+                </table>
+                <button type="button" class="btn btn-info"
+                    onclick="location.href = 'add.html'">
+                    <img
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAACUCAMAAABC4vDmAAAAWlBMVEX///8AAABOTk7w8PD7+/v19fX4+PhlZWXQ0NBycnLd3d2/v78kJCR6enpVVVUtLS2fn5/m5uYPDw+1tbUYGBisrKyZmZmMjIyFhYU7OztCQkJdXV3W1tbKysqgUu59AAAEvElEQVR4nO1c6bqiMAxlZFEWEQRcQN//NUe9l2tSWiRtdc58M/kp0B6bJjlJlyD4L/+wJPWmOxzT9bekx0O3qZM/BifK8iotfmmlSKs8iz6NKM635U4PaJRduc3jzyG6VMM8nqcM1eUTiMJuZdCZQZOrLnwzpPwkATTKKX8foigvbSDdpczfM+2j7mwL6S7nzj+sqOldIN2lbzzDui62tzkZrh4h1akPSHdJa1+YmkU+YL9f8lbReIFUr2f62PXDqbpe6jB+SFhfrtVp6Oec/drDYOXmDoZbgNPG3uQWFs2TcOfqteKtoeXzy8B2C48mH7J1iomhQXXrfFHoCHPT9w6RZ6NtsawEfCmp9FFgY4up0dlT3wgpXKJ1u3tLK6y0erNpSavFyqal47Sd1trJNO20taO8mSlHaS1aecpxCuvkjmnlyCEvK1dUE93tOzdId+kmhiMa+8kcL6xNmMpmEkQFs71Rv009MaFoQjcWm85GHebKGzuLVB3sF6ogVP+NV9qfq60vijix6uk8pyIqqvWS6KzwgiLziykIMmW6b19/ovyR4g0Z7kVB9VIVtcLpvI/TXTLex+4VF1Um1JtSW0Ud6/m3m49gmqCa9VY117YVu1gm3F8VcwrkDteXH9eJ4ttT85tXDl+EKcwyEfGOuFKMuXPE0qKlAeAhdXqjS60o/+XBbDCNAJ/lEq4yhn8RmeiWzPWIEfyVoPnkRxWFJKtgrK/XDxVD3ko8OTElicFeGEPWaiZi+ayEE1JLElks47dn3ZfMn7WCpoOQ5JulyATZUOk8NctkRblUSCbHSgSKmVY5fc4G6kUw8gaKh9rpUJ3mH78JFBuKScbFOHAvatgFVMDckPot8wfC7NwFFJtVqlegjqwU1lVcQCXUvhSHzRiqlLG4gGIcRuHejN5I1xCdQCW0Zz4clB/I/IErKOYVBvogpnDFHNgNFPMKseHBWdysG6iQxlw6IDQBXZAbegVl6jyidinPYBxBUTWVT6qQ0QxUXnh3BEUn9O6Z/FKsw8zn7wHFTP+pJ+qlLHI9V1D67mkOZpEUu4KiinomgCTG7CwqGq6g6JQuxh+pp+8t9qm4gkoofxn7r93muTMoNtPHfJYuVolXAXyAoqx3TGcpwbMptDiDouY3Er0D+W1ukT4K9VJTULXhpbl8kBZWDt+/0ZzQnBgnVVqu9ELSt9bwSpnOLF1eCIAxC6Zuylg3mS5hSMVc/aCWNjoqSrNMU6J2xjRTr6Op1EgxKShDOJ4uqtiIqdBAQ7IAVKhZ2ZRLa9DDC1B7A6hs0oGVGGJYTIp6fwsoSPVhTnQYlwDpPCHDDGRAhqQukCQPkg5DJg6QKRZmMgqZtkMWOCBLQZBFM8jyImYhFrJkDVncx1wGgVwwglxaw1yEhFyuhVzYxtwCALlZAnNbCeQGHMitSpibuiC3v2FuFITcUom5+RRzmy7khmbMrd+Ym+QhjxNgHrzAPKICeZgH89gT5gExzKN0mIcOMY9nYh5kxTzyi3k4GvMYOeaBe8yrCTAvcQggr7sIMC8GCSCvUAkwL5sJIK/lCTAvMAogr3p6wMK7FOsheNeHPQTworWH4F1J9yV4l/d9Cd41hz8CdiHkfwGQ3xgPTzme/+KIAAAAAElFTkSuQmCC"
+                        height="30" width="30" /></button>
+            </div>
+            <script>
+            consulta_general();
+        </script>
+
+        </div>-
+    </body>
+</html>

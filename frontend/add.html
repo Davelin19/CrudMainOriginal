@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="estilos.css">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous">
+        <link href rel integrity>
+        <link rel href>
+        <script src="app.js"></script>
+        <title>Gestor de contraseñas</title>
+    </head>
+    <body style="background-color: rgb(172, 197, 230)">
+        <div id="main" class="container">
+            <div id="marco" class="container my-5 text-center">
+                <h1>Gestor de contraseñas</h1>
+                <div class="form-group">
+                    <label for="plataforma">Plataforma: </label>
+                    <input type="text" class="form-control" name="Plataforma"
+                        id="Plataforma" placeholder="Plataforma">
+                </div>
+                <div class="form-group">
+                    <label for="usuario">Usuario: </label>
+                    <input type="text" class="form-control" name="usuario"
+                        id="usuario" placeholder="usuario">
+                </div>
+
+                <div class="form-group">
+                    <label for="clave">Clave: </label>
+                    <input type="text" class="form-control" name="clave"
+                        id="clave" placeholder="clave">
+                </div>
+                <div class="tarjeta">
+                    <button type="submit" class="btn btn-info"
+                        onclick="registrar()"> <img
+                            src="https://www.pngmart.com/files/8/Save-Button-PNG-Free-Image.png"
+                            height="30" width="30">Guardar</button>
+                    <button type="submit" class="btn btn-warning"
+                        onclick="location.href = 'index.html'"> <img
+                            src="data:image/jpeg;base64,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"
+                            height="30" width="30" />guardar</button>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
